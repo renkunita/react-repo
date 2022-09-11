@@ -7,13 +7,17 @@ import Board from './components/Board';
 import styled from "styled-components";
 
 /* ↓これ追加 */
-const StyledHello = styled.h1`
-  color: red;
+const StyledHeader = styled.h1`
+  color: black;
+  width: 100%;
+  margin: 20px auto 0;
+  text-align: center;
 `;
 
 const App = () => {
   return (
     <>
+    <StyledHeader>15SlidePuzzle</StyledHeader>
       <Board/>
     </>
   );

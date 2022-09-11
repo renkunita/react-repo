@@ -14,10 +14,10 @@ const StyledSlidePuzzle = styled.div`
 
 const Board = styled.div`
     display: grid;
-    width: 400px;
-    margin:100px auto 0;
-    grid-template-columns: 100px 100px 100px 100px;
-    grid-template-rows: 100px 100px 100px 100px;
+    width: 320px;
+    margin:60px auto 0;
+    grid-template-columns: 80px 80px 80px 80px;
+    grid-template-rows: 80px 80px 80px 80px;
 `;
 
 
@@ -25,8 +25,8 @@ const Piece = styled.div`
     border: 2px solid #000;
     color: red;
     font-size: 40px;
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     display: flex;
     flex-direction: column;
     justify-content: center;
