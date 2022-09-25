@@ -15,7 +15,7 @@ const StyledSlidePuzzle = styled.div`
 const Board = styled.div`
     display: grid;
     width: 320px;
-    margin:60px auto 0;
+    margin:40px auto 0;
     grid-template-columns: 80px 80px 80px 80px;
     grid-template-rows: 80px 80px 80px 80px;
 `;
@@ -33,6 +33,34 @@ const Piece = styled.div`
     align-items: center;
 
 `;
+
+const FrmButton = styled.button`
+    width: 100%;
+    height: 80px;
+    display: flex;
+    border: 0px solid #000;
+    background-color: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+`;
+
+const BtnShuffle = styled.button`
+    border: 2px solid #000;
+    color: black;
+    background-color: #f4f4f4;
+    font-size: 20px;
+    width: 100px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+
+`;
+
 
 const onClick = function (ind) {
     const indexList=[
@@ -67,6 +95,16 @@ const onClick = function (ind) {
 
 };
 
+const onClickShuffle = function () {
+    const min = 0 ;
+    const max = 15 ;
+
+    for (let i = 0; i < 2000; ++i){
+        var r = Math.floor( Math.random() * (max + 1 - min) ) + min ; 
+        onClick(r);
+    }
+};
+
 export default (props) => {
     const list = [];
     const array = new Array();
@@ -77,6 +115,9 @@ export default (props) => {
     
     return (
     <>
+    <FrmButton>
+        <BtnShuffle onClick={() => {onClickShuffle();}}>shuffle</BtnShuffle>
+    </FrmButton>
     <Board>
         {list}
     </Board>
